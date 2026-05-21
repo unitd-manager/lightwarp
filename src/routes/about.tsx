@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { PageShell } from "../components/page-shell";
 import { Section } from "../components/section";
 import { LighthouseBeam } from "../components/lighthouse-beam";
+import { Link } from "react-router-dom";
 
 const timeline = [
   { year: "2018", title: "First Beam", desc: "Two friends, one render farm in a garage." },
@@ -104,8 +104,7 @@ export default function About() {
             </p>
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-brand px-8 py-4 text-sm font-medium text-white glow-brand pulse-glow"
-            >
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-brand px-8 py-4 text-sm font-medium text-white glow-brand pulse-glow">
               Get in Touch →
             </Link>
           </div>
@@ -113,4 +112,4 @@ export default function About() {
       </Section>
     </PageShell>
   );
-}
+}     

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { PageShell } from "../components/page-shell";
 import { Section } from "../components/section";
-
+import image1 from "../assets/images/image 1.png";
+import image2 from "../assets/images/image 2.png";
+import image3 from "../assets/images/image3.png";
+import image4 from "../assets/images/image 4.png";
 const projects = [
   { title: "Aurora Watch", client: "Nova Timepieces", tags: ["CGI", "Product"], hue: "from-pink/40 to-violet/40" },
   { title: "Helios Sneaker", client: "Orbital", tags: ["Animation", "VFX"], hue: "from-blue/40 to-pink/40" },
@@ -11,7 +14,35 @@ const projects = [
   { title: "Strata Engine", client: "Kairos", tags: ["CGI", "Motion"], hue: "from-blue/40 to-violet/40" },
 ];
 
-const capabilities = ["CGI", "VFX", "Motion", "Product Rendering", "3D Design", "Character", "Realtime", "Compositing"];
+/*const capabilities = ["CGI", "VFX", "Motion", "Product Rendering", "3D Design", "Character", "Realtime", "Compositing"];*/
+
+
+const capabilities = [
+  {
+    title: "CGI Production",
+    description:
+      "Photorealistic CGI crafted for commercials, films, and digital experiences.",
+    image: image1,
+  },
+  {
+    title: "VFX & Compositing",
+    description:
+      "Seamless integration of visual effects with cinematic storytelling.",
+    image: image2,
+  },
+  {
+    title: "Product Rendering",
+    description:
+      "High-end product visualization with studio-quality lighting and materials.",
+    image: image3,
+  },
+  {
+    title: "Character Animation",
+    description:
+      "Expressive characters brought to life through detailed animation workflows.",
+    image: image4,
+  },
+];
 
 export default function Projects() {
   return (
@@ -70,14 +101,14 @@ export default function Projects() {
         </div>
       </Section>
 
-      <Section
+      {/*<Section
         eyebrow="Capabilities"
         title={<>Our <span className="text-gradient">Capabilities</span></>}
         subtitle="Drag, scroll, explore — every discipline under one beam."
       >
         <div className="relative -mx-6 overflow-x-auto px-6 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="flex gap-5 pb-4">
-            {capabilities.map((c, i) => (
+           {capabilities.map((c, i) => (
               <motion.div
                 key={c}
                 initial={{ opacity: 0, x: 40 }}
@@ -100,7 +131,69 @@ export default function Projects() {
             ))}
           </div>
         </div>
-      </Section>
-    </PageShell>
+      </Section>*/}
+
+<Section
+  eyebrow="Capabilities"
+  title={
+    <>
+      Our <span className="text-gradient">Capabilities</span>
+    </>
+  }
+  subtitle="Every frame crafted with precision and cinematic quality."
+>
+  <div className="space-y-10 w-full">
+    {capabilities.map((item, index) => (
+      <motion.div
+        key={item.title}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid items-center gap-8 lg:grid-cols-2"
+      >
+        {/* Text */}
+        <div
+          className={`${
+            index % 2 === 1 ? "lg:order-2" : ""
+          }`}
+        >
+        
+          <div className="text-7xl lg:text-8xl font-black leading-none text-gradient opacity-90">
+            0{index + 1}
+          </div>
+
+          <h3 className="mt-3 text-4xl font-bold">
+            {item.title}
+          </h3>
+
+          <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+            {item.description}
+          </p>
+
+          <button className="mt-6 rounded-full bg-gradient-brand px-6 py-3 text-white">
+            Explore More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div
+          className={`${
+            index % 2 === 1 ? "lg:order-1" : ""
+          }`}
+        >
+          <div className="group overflow-hidden rounded-3xl border border-white/10">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</Section>
+</PageShell>
   );
 }

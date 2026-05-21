@@ -3,7 +3,7 @@ import { LogoMark } from "./lighthouse-logo";
 
 export function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-white/10">
+    <footer className="relative mt-10 border-t border-white/10">
       <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-pink/50 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
