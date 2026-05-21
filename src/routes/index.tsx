@@ -146,9 +146,9 @@ export default function Home() {
       </Section>*/}
 
 
-<Section className="py-8">
+<Section className="mt-24 py-8">
   <div className="mx-auto max-w-7xl">
-    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 backdrop-blur-xl p-5 lg:p-6">
+    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 backdrop-blur-xl p-5 lg:p-10">
 
       {/* Background Glow */}
       <div className="absolute -top-20 left-1/4 h-30 w-30 rounded-full bg-pink-500/20 blur-3xl" />
@@ -181,7 +181,7 @@ export default function Home() {
               {s.icon}
             </div>
 
-            <div className="text-6xl lg:text-7xl font-bold leading-none bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">
+            <div className="text-5xl lg:text-6xl font-bold leading-none bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">
               {s.k}
             </div>
 
