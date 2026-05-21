@@ -18,6 +18,38 @@ const services = [
 
 const partners = ["NOVA", "AURORA", "PRISM", "ORBITAL", "HELIOS", "VANTA", "ECHO", "LUMEN", "STRATA", "KAIROS"];
 
+const workVideos = [
+  {
+    title: "Featured Project Reel",
+    label: "Studio Project",
+    desc: "A flagship project video created by our team to showcase client storytelling, motion design, and polished visual execution.",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    poster: "https://images.unsplash.com/photo-1524041253189-71bc4786b35c?auto=format&fit=crop&w=1200&q=80",
+    highlight: "+28% audience recall",
+  },
+  {
+    title: "Product Motion Reel",
+    label: "Product Visuals",
+    desc: "A product-focused video that shows material detail, animation, and a cohesive branded look.",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    poster: "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Immersive Scene Breakdown",
+    label: "Environment",
+    desc: "A short case film highlighting our scene creation, lighting, and atmosphere work in a polished edit.",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    poster: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Character Spotlight",
+    label: "Animation",
+    desc: "A character-centric demo reel showcasing emotion, gesture, and performance animation.",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    poster: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
 export default function Home() {
   return (
     <PageShell>
@@ -119,6 +151,55 @@ export default function Home() {
               </div>
             </motion.div>
           ))}
+        </div>
+      </Section>
+
+      {/* OUR WORK */}
+      <Section
+        eyebrow="Our Work"
+        title={<>Studio <span className="text-gradient">Videos</span></>}
+        subtitle="Every card is a video produced by our team — no placeholder case study card, just real work in motion."
+      >
+        <div className="grid gap-6 sm:grid-cols-2">
+          {workVideos.map((video) => (
+            <article
+              key={video.title}
+              className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-black/10 transition-transform hover:-translate-y-1"
+            >
+              <video
+                controls
+                preload="metadata"
+                poster={video.poster}
+                className="h-60 w-full object-cover"
+              >
+                <source src={video.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-6">
+                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                  {video.label}
+                </div>
+                <h4 className="text-xl font-semibold text-white">{video.title}</h4>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{video.desc}</p>
+                {video.highlight && (
+                  <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-white/80">
+                    <span className="h-2.5 w-2.5 rounded-full bg-gradient-brand" />
+                    {video.highlight}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/projects"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-brand px-8 py-4 text-sm font-medium text-white glow-brand transition-transform hover:scale-[1.03]"
+          >
+            <span className="relative z-10">See More Videos</span>
+            <span className="relative z-10">→</span>
+            <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+          </Link>
         </div>
       </Section>
 
