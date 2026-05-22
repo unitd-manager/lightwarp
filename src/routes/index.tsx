@@ -363,7 +363,7 @@ export default function Home() {
 
 
       {/* PARTNERS */}
-      {/* PARTNERS */}
+      
 <Section
   eyebrow="Partners & Clients"
   title={
