@@ -33,7 +33,7 @@ export function PageShell({ children }: { children: ReactNode }) {
               filter: "blur(20px)",
             }}
           />
-          <div className="pt-28">{children}</div>
+          <div className="pt-6">{children}</div>
           <Footer />
         </motion.main>
       </AnimatePresence>
