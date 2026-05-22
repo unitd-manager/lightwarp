@@ -122,6 +122,105 @@ export default function Home() {
         </div>
       </Section>
 
+
+{/* WHY LIGHTWARP */}
+<Section
+  eyebrow="Why choose us"
+  title={
+    <>
+      Why <span className="text-gradient">Lightwarp?</span>
+    </>
+  }
+  subtitle="We blend cinematic storytelling, technical precision, and cutting-edge 3D artistry to create visuals that leave a lasting impression."
+>
+  <div className="grid gap-6 lg:grid-cols-2">
+    {[
+      {
+        title: "Cinematic Storytelling",
+        desc: "Every frame is crafted with emotion, atmosphere, and purpose — transforming visuals into memorable experiences.",
+        number: "01",
+      },
+      {
+        title: "Advanced 3D Expertise",
+        desc: "From hyper-real product renders to immersive CGI worlds, our team delivers precision-driven execution.",
+        number: "02",
+      },
+      {
+        title: "Fast & Collaborative",
+        desc: "Transparent workflows, rapid iterations, and close collaboration from concept through delivery.",
+        number: "03",
+      },
+      {
+        title: "Results That Elevate Brands",
+        desc: "We build visuals designed to strengthen identity, increase engagement, and drive impact.",
+        number: "04",
+      },
+    ].map((item, i) => (
+      <motion.div
+        key={item.title}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+          delay: i * 0.1,
+        }}
+        className="group relative overflow-hidden rounded-3xl border-gradient glass p-8"
+      >
+        <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-pink/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+        <div className="relative flex items-start justify-between">
+          <div>
+            <h3 className="text-2xl font-semibold">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              {item.desc}
+            </p>
+          </div>
+
+          <div className="text-5xl font-display font-semibold text-white/10 transition-all duration-300 group-hover:text-pink/20">
+            {item.number}
+          </div>
+        </div>
+
+        <div className="mt-8 h-px w-full bg-gradient-to-r from-pink/40 via-white/10 to-transparent" />
+
+        <div className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gradient">
+          Learn More
+          <span className="transition-transform group-hover:translate-x-1">
+            →
+          </span>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+
+  {/* Bottom highlight */}
+  <div className="relative mt-20 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-10 backdrop-blur">
+    <div className="absolute inset-0 bg-gradient-to-r from-pink/10 via-transparent to-cyan/10" />
+
+    <div className="relative text-center">
+      <div className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+        Trusted Creativity
+      </div>
+
+      <h3 className="text-3xl sm:text-4xl font-semibold leading-tight">
+        We don't just create visuals —
+        <span className="text-gradient">
+          {" "}we create experiences.
+        </span>
+      </h3>
+
+      <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
+        Lightwarp combines imagination, technology, and cinematic execution to transform ideas into extraordinary 3D realities.
+      </p>
+    </div>
+  </div>
+</Section>
+
+
       {/* PARTNERS */}
       <Section eyebrow="Partners & Clients" title={<>Brands we've <span className="text-gradient">illuminated</span></>}>
         <div className="relative overflow-hidden py-4">
@@ -164,6 +263,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+  
     </PageShell>
   );
 }
