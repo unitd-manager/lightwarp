@@ -5,6 +5,14 @@ import { Section } from "../components/section";
 import { LighthouseScene } from "../components/lighthouse-scene";
 import { Particles } from "../components/particles";
 import { LighthouseBeam, ScanLine } from "../components/lighthouse-beam";
+import gif1 from "../assets/images/gif1.gif";
+import gif2 from "../assets/images/gif2.gif";
+import gif3 from "../assets/images/gif3.gif";
+import gif4 from "../assets/images/gif4.gif";
+import gif5 from "../assets/images/gif5.gif";
+import gif6 from "../assets/images/gif6.gif";
+import gif7 from "../assets/images/gif 7.gif";
+import gif8 from "../assets/images/gif8.gif";
 
 const services = [
   { title: "3D Animation", desc: "Cinematic narratives rendered frame by frame.", icon: "◐" },
@@ -20,29 +28,29 @@ const partners = ["NOVA", "AURORA", "PRISM", "ORBITAL", "HELIOS", "VANTA", "ECHO
 
 const workVideos = [
   {
-    title: "Featured Project Reel",
-    label: "Studio Project",
-    desc: "A flagship project video created by our team to showcase client storytelling, motion design, and polished visual execution.",
-    // ✅ YouTube embed format
+    title: "Shell You Be Mine?",
+  label: "Short Film",
+    desc: "A creative short film showcasing artistry, mood, and character in motion.",    // ✅ YouTube embed format
     src: "https://www.youtube.com/embed/yinRrmEpfr4",
     highlight: "+28% audience recall",
   },
   {
-    title: "Product Motion Reel",
-    label: "Product Visuals",
-    desc: "A product-focused video that shows material detail, animation, and a cohesive branded look.",
+    title: "Lightwarp Studios Capabilities Reel",
+   label: "Studio Project",
+    desc:  "An immersive brand visual crafted with detail and atmosphere",
+
     // ✅ Vimeo embed format
     src: "https://player.vimeo.com/video/1153379831",
   },
   {
-    title: "Immersive Scene Breakdown",
-    label: "Environment",
+    title: "The jab",
+    label: "Short Flim ",
     desc: "A short case film highlighting our scene creation, lighting, and atmosphere work in a polished edit.",
     // ✅ Another YouTube embed format
-    src: "https://www.youtube.com/embed/a8RHqN93qfo",
+    src: "https://www.youtube.com/embed/4d27i10x2wI?t=3s",
   },
   {
-    title: "Character Spotlight",
+    title: "Cyberia 2084 - Blender EEVEE 3D Animated Short Film",
     label: "Animation",
     desc: "A character-centric demo reel showcasing emotion, gesture, and performance animation.",
     // ✅ Your new YouTube embed format
@@ -50,9 +58,17 @@ const workVideos = [
   },
 ];
 
+const creativeGifs = [
+  gif8,
+  gif2,
+  gif3,
+  gif4,
+  gif5,
+  gif6,
+  gif7,
+  gif1,
+];
 
-
- 
 
 export default function Home() {
   return (
@@ -100,7 +116,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="mt-14 grid max-w-md grid-cols-3 gap-6">
+           {/*} <div className="mt-14 grid max-w-md grid-cols-3 gap-6">
               {[
                 { k: "180+", v: "Projects" },
                 { k: "12", v: "Awards" },
@@ -111,7 +127,7 @@ export default function Home() {
                   <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">{s.v}</div>
                 </div>
               ))}
-            </div>
+            </div>*/}
           </motion.div>
 
           <div className="relative h-[560px]">
@@ -125,6 +141,95 @@ export default function Home() {
           <div className="h-10 w-px bg-gradient-to-b from-pink to-transparent" />
         </div>
       </section>
+
+    {/* COUNTER SECTION */}
+     {/* <Section className="py-1 mt-0">
+
+        <div className="mx-auto flex max-w-6xl justify-center rounded-3xl glass border-gradient px-4 py-7">
+
+          <div className="grid w-full grid-cols-1 gap-1 text-center sm:grid-cols-3">
+
+            {[
+              { k: "180+", v: "Projects" },
+              { k: "12", v: "Awards" },
+              { k: "40+", v: "Brands" },
+            ].map((s) => (
+
+              <div
+                key={s.v}
+                className="flex flex-col items-center justify-center"
+              >
+
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-gradient leading-none">
+                  {s.k}
+                </div>
+
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  {s.v}
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+      </Section>*/}
+
+
+<Section className="py-8">
+  <div className="mx-auto max-w-7xl">
+    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-black/40 backdrop-blur-xl p-5 lg:p-6">
+
+      {/* Background Glow */}
+      <div className="absolute -top-20 left-1/4 h-30 w-30 rounded-full bg-pink-500/20 blur-3xl" />
+      <div className="absolute -bottom-20 right-1/4 h-30 w-30 rounded-full bg-violet-500/20 blur-3xl" />
+
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 relative z-10">
+
+        {[
+          {
+            k: "180+",
+            v: "Projects",
+            icon: "🚀",
+          },
+          {
+            k: "12",
+            v: "Awards",
+            icon: "🏆",
+          },
+          {
+            k: "40+",
+            v: "Brands",
+            icon: "✨",
+          },
+        ].map((s) => (
+          <div
+            key={s.v}
+            className="group rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(236,72,153,0.2)]"
+          >
+            <div className="text-3xl mb-4">
+              {s.icon}
+            </div>
+
+            <div className="text-6xl lg:text-7xl font-bold leading-none bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">
+              {s.k}
+            </div>
+
+            <div className="mt-3 text-sm uppercase tracking-[0.25em] text-white/60">
+              {s.v}
+            </div>
+
+            <div className="mt-4 h-[2px] w-0 bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-500 group-hover:w-full" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Section>
+
+
 
       {/* SERVICES */}
       <Section

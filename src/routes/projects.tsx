@@ -11,37 +11,37 @@ import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image 4.png";
 const projects = [
   {
-    title: "Aurora Watch",
+    title: "Lush Victorian Garden Final Render ",
     client: "Nova Timepieces",
     tags: ["CGI", "Product"],
     videoSrc: "https://www.youtube.com/embed/b-qRx-LlB1A", // YouTube
   },
   {
-    title: "Helios Sneaker",
+    title: "Stuffed (Summer Industry Course) Remastered CutHelios Sneaker",
     client: "Orbital",
     tags: ["Animation", "VFX"],
     videoSrc: "https://www.youtube.com/embed/bzCrjcqWliU", // YouTube
   },
   {
-    title: "Vanta Headset",
+    title: "Breaking Benjamin - Awaken (Official Music Video)Vanta Headset",
     client: "Vanta Audio",
     tags: ["Product Viz"],
-    videoSrc: "https://www.youtube.com/embed/a8RHqN93qfo", // YouTube
+    videoSrc: "https://www.youtube.com/embed/w0GfewGYR3g?t=1s", // YouTube
   },
   {
-    title: "Lumen Tower",
+    title: "Samsung S7 Ad - Blender 3D Animated Commercial Concept",
     client: "Helios Realty",
     tags: ["Arch Viz"],
-    videoSrc: "https://player.vimeo.com/video/1040553915", // Vimeo
+    videoSrc: "https://www.youtube.com/embed/4Esie0f7HVw", // YouTube
   },
   {
-    title: "Echo Companion",
+    title: "True To Texas - Let's Bring Productions HomeEcho Companion",
     client: "Echo Labs",
     tags: ["Character"],
     videoSrc: "https://www.youtube.com/embed/bpgrUK9EGjI", // YouTube
   },
   {
-    title: "Strata Engine",
+    title: "Caught Off Guard - VIZ Vertical Studio Fall 2021",
     client: "Kairos",
     tags: ["CGI", "Motion"],
     videoSrc: "https://www.youtube.com/embed/7iZBroHtizk", // YouTube
@@ -295,29 +295,15 @@ export default function Projects() {
           />
         </div>
 
-        {/* Project Info */}
-        <div className="flex items-start justify-between gap-4 p-6">
-          <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              {p.client}
-            </div>
-            <h3 className="mt-1 text-2xl font-semibold">{p.title}</h3>
-          </div>
-          <div className="flex flex-wrap justify-end gap-2">
-            {p.tags.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
+        {/* Project Title Only */}
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold">{p.title}</h3>
         </div>
       </motion.article>
     ))}
   </div>
 </Section>
+
 
 
       {/*<Section
@@ -386,13 +372,13 @@ export default function Projects() {
             {item.title}
           </h3>
 
-          <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground">
             {item.description}
           </p>
 
-          <button className="mt-6 rounded-full bg-gradient-brand px-6 py-3 text-white">
+          {/*<button className="mt-6 rounded-full bg-gradient-brand px-6 py-3 text-white">
             Explore More
-          </button>
+          </button>*/}
         </div>
 
         {/* Image */}
