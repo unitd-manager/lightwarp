@@ -12,7 +12,7 @@ export function Section({
   id?: string;
   eyebrow?: string;
   title?: ReactNode;
-  subtitle?: string;
+  subtitle?: ReactNode;
   children?: ReactNode;
   className?: string;
 }) {
@@ -20,7 +20,7 @@ export function Section({
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id={id} className={`relative mx-auto max-w-7xl px-6 py-24 sm:py-32 ${className}`}>
+    <section id={id} className={`relative mx-auto max-w-7xl px-6 py-12 sm:py-28 ${className}`}>
       <div ref={ref}>
         {(eyebrow || title || subtitle) && (
           <motion.div
@@ -51,4 +51,4 @@ export function Section({
       </div>
     </section>
   );
-}
+}   

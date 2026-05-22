@@ -181,13 +181,13 @@ export default function Projects() {
             {item.title}
           </h3>
 
-          <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground">
             {item.description}
           </p>
 
-          <button className="mt-6 rounded-full bg-gradient-brand px-6 py-3 text-white">
+          {/*<button className="mt-6 rounded-full bg-gradient-brand px-6 py-3 text-white">
             Explore More
-          </button>
+          </button>*/}
         </div>
 
         {/* Image */}
