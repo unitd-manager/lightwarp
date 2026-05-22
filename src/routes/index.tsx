@@ -20,29 +20,29 @@ const partners = ["NOVA", "AURORA", "PRISM", "ORBITAL", "HELIOS", "VANTA", "ECHO
 
 const workVideos = [
   {
-    title: "Featured Project Reel",
-    label: "Studio Project",
-    desc: "A flagship project video created by our team to showcase client storytelling, motion design, and polished visual execution.",
-    // ✅ YouTube embed format
+    title: "Shell You Be Mine?",
+  label: "Short Film",
+    desc: "A creative short film showcasing artistry, mood, and character in motion.",    // ✅ YouTube embed format
     src: "https://www.youtube.com/embed/yinRrmEpfr4",
     highlight: "+28% audience recall",
   },
   {
-    title: "Product Motion Reel",
-    label: "Product Visuals",
-    desc: "A product-focused video that shows material detail, animation, and a cohesive branded look.",
+    title: "Lightwarp Studios Capabilities Reel",
+   label: "Studio Project",
+    desc:  "An immersive brand visual crafted with detail and atmosphere",
+
     // ✅ Vimeo embed format
     src: "https://player.vimeo.com/video/1153379831",
   },
   {
-    title: "Immersive Scene Breakdown",
-    label: "Environment",
+    title: "The jab",
+    label: "Short Flim ",
     desc: "A short case film highlighting our scene creation, lighting, and atmosphere work in a polished edit.",
     // ✅ Another YouTube embed format
-    src: "https://www.youtube.com/embed/a8RHqN93qfo",
+    src: "https://www.youtube.com/embed/4d27i10x2wI?t=3s",
   },
   {
-    title: "Character Spotlight",
+    title: "Cyberia 2084 - Blender EEVEE 3D Animated Short Film",
     label: "Animation",
     desc: "A character-centric demo reel showcasing emotion, gesture, and performance animation.",
     // ✅ Your new YouTube embed format
@@ -231,6 +231,62 @@ export default function Home() {
           </div>
         </div>
       </Section>
+{/* TESTIMONIALS */}
+<Section
+  eyebrow="Testimonials"
+  title={<>Voices of <span className="text-gradient">Trust</span></>}
+  subtitle="What our clients say about working with us."
+>
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      {
+        name: "Sophia Patel",
+        role: "Marketing Manager",
+        quote:
+          "Working with this studio was seamless. The visuals exceeded expectations and boosted our campaign.",
+        img: "https://randomuser.me/api/portraits/women/44.jpg",
+      },
+      {
+        name: "Rahul Verma",
+        role: "Product Lead",
+        quote:
+          "Their creativity and professionalism stood out. The 3D animation helped us connect with our audience.",
+        img: "https://randomuser.me/api/portraits/men/32.jpg",
+      },
+      {
+        name: "Emily Johnson",
+        role: "Creative Director",
+        quote:
+          "A fantastic team that truly understands storytelling. The final output was polished and impactful.",
+        img: "https://randomuser.me/api/portraits/women/68.jpg",
+      },
+    ].map((t, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.55, delay: i * 0.06 }}
+        className="rounded-2xl bg-white/[0.05] border border-white/10 p-6 shadow-lg hover:-translate-y-1 transition-transform"
+      >
+        <div className="flex items-center gap-4 mb-4">
+          <img
+            src={t.img}
+            alt={t.name}
+            className="w-12 h-12 rounded-full object-cover border border-gradient"
+          />
+          <div>
+            <div className="font-semibold text-gradient">{t.name}</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {t.role}
+            </div>
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground">“{t.quote}”</p>
+      </motion.div>
+    ))}
+  </div>
+</Section>
 
       {/* CTA */}
       <Section className="relative">
