@@ -9,6 +9,8 @@ import image1 from "../assets/images/image 1.png";
 import image2 from "../assets/images/image 2.png";
 import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image 4.png";
+import proj from "../assets/images/proj.jpg";
+
 const projects = [
   {
     title: "Lush Victorian Garden Final Render ",
@@ -186,84 +188,59 @@ export default function Projects() {
         </div>
       </motion.div>
 
-      {/* RIGHT VISUAL */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.92 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative"
-      >
+    {/* PROJECTS HERO VISUAL */}
+<div className="relative h-[640px] overflow-hidden">
 
-        {/* Glow */}
-        <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-pink/20 via-violet/10 to-blue/20 blur-3xl" />
+  {/* BG */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,128,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(0,120,255,0.18),transparent_35%),linear-gradient(to_bottom,#050816,#090d1f)]" />
 
-        {/* Main Visual Card */}
-        <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.04] backdrop-blur-2xl">
+  {/* SIGNAL GLOW */}
+  <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-3xl" />
 
-          {/* Grid Overlay */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
-          </div>
+  {/* SIGNAL RINGS */}
+  <motion.div
+    animate={{ rotate: [0, 360] }}
+    transition={{
+      repeat: Infinity,
+      duration: 24,
+      ease: "linear",
+    }}
+    className="absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-500/20"
+  />
 
-          {/* LIGHTHOUSE VISUAL */}
-          <div className="relative h-[640px]">
+  {/* OBSERVATORY */}
+  <motion.img
+    animate={{
+      y: [0, -10, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 6,
+    }}
+    src={proj}
+    alt="Projects Observatory"
+    className="absolute left-1/2 bottom-0 z-20 w-[92%] max-w-[760px] -translate-x-1/2 object-contain"
+  />
 
-            <LighthouseScene className="h-full w-full scale-110" />
+  {/* SHOWCASE PANEL */}
+  <motion.div
+    animate={{ y: [0, -10, 0] }}
+    transition={{
+      repeat: Infinity,
+      duration: 5,
+    }}
+    className="absolute right-8 top-10 z-30 rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-xl"
+  >
+    <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+      Featured Work
+    </div>
 
-            {/* Large Beam Glow */}
-            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink/10 blur-3xl animate-pulse" />
+    <div className="mt-3 text-2xl font-semibold">
+      Cinematic Projects
+    </div>
+  </motion.div>
 
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-          </div>
-
-          {/* Floating Project Card */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 5 }}
-            className="absolute left-6 top-6 w-[240px] rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-xl"
-          >
-            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Featured Work
-            </div>
-
-            <h3 className="mt-3 text-xl font-semibold">
-              Future Motion Campaign
-            </h3>
-
-            <p className="mt-2 text-sm text-muted-foreground">
-              Cinematic CGI & realtime visuals crafted for a next-gen
-              technology launch.
-            </p>
-          </motion.div>
-
-          {/* Bottom Card */}
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 6 }}
-            className="absolute bottom-6 right-6 rounded-3xl border border-white/10 bg-black/40 px-6 py-5 backdrop-blur-xl"
-          >
-            <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Creative Impact
-            </div>
-
-            <div className="mt-2 text-3xl font-semibold text-gradient">
-              Global Reach
-            </div>
-          </motion.div>
-
-          {/* Floating Badge */}
-          <motion.div
-            animate={{ rotate: [0, 5, -5, 0] }}
-            transition={{ repeat: Infinity, duration: 7 }}
-            className="absolute right-10 top-1/2 rounded-full border border-pink/20 bg-pink/10 px-5 py-3 backdrop-blur-xl"
-          >
-            <span className="text-sm font-medium text-white">
-              Award Winning Studio
-            </span>
-          </motion.div>
-        </div>
-      </motion.div>
+</div>
     </div>
   </div>
 </section>

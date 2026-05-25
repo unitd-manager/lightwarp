@@ -144,17 +144,141 @@ export default function Contact() {
             <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
           </div>
 
-          {/* LIGHTHOUSE VISUAL */}
-          <div className="relative h-[520px]">
+        {/* CONTACT VISUAL */}
+<div className="relative h-[520px] overflow-hidden">
 
-            <LighthouseScene className="h-full w-full scale-110" />
+  {/* BACKGROUND */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,128,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(0,120,255,0.18),transparent_35%),linear-gradient(to_bottom,#050816,#0a0d1d)]" />
 
-            {/* MAIN GLOW */}
-            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink/10 blur-3xl animate-pulse" />
+  {/* GRID */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+  </div>
 
-            {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-          </div>
+  {/* CENTER GLOW ORB */}
+  <motion.div
+    animate={{
+      scale: [1, 1.08, 1],
+      y: [0, -12, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 6,
+    }}
+    className="absolute left-1/2 top-1/2 z-20 h-[240px] w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-pink-500/30 via-violet-500/20 to-blue-500/30 shadow-[0_0_120px_rgba(255,0,128,0.35)] backdrop-blur-3xl"
+  >
+
+    <div className="absolute inset-6 rounded-full border border-white/10" />
+
+    <div className="absolute inset-12 rounded-full border border-white/10" />
+
+  </motion.div>
+
+  {/* FLOATING MESSAGE ICON */}
+  <motion.div
+    animate={{
+      y: [0, -18, 0],
+      rotate: [0, 5, -5, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 7,
+    }}
+    className="absolute left-10 top-16 z-30 flex h-24 w-24 items-center justify-center rounded-3xl border border-white/10 bg-white/[0.05] text-4xl backdrop-blur-xl"
+  >
+    ✉
+  </motion.div>
+
+  {/* FLOATING CHAT PANEL */}
+  <motion.div
+    animate={{
+      y: [0, 12, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 6,
+    }}
+    className="absolute right-10 top-20 z-30 rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-xl"
+  >
+
+    <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+      Response Time
+    </div>
+
+    <div className="mt-2 text-2xl font-semibold text-gradient">
+      Within 24hrs
+    </div>
+
+  </motion.div>
+
+  {/* CONNECTION LINES */}
+  <motion.div
+    animate={{
+      rotate: [0, 360],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 18,
+      ease: "linear",
+    }}
+    className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+  />
+
+  <motion.div
+    animate={{
+      rotate: [360, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 24,
+      ease: "linear",
+    }}
+    className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-pink-500/10"
+  />
+
+  {/* FLOATING CONTACT CARD */}
+  <motion.div
+    animate={{
+      y: [0, -10, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 5,
+    }}
+    className="absolute bottom-10 left-10 z-30 w-[250px] rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-xl"
+  >
+
+    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+      Start A Conversation
+    </div>
+
+    <h3 className="mt-3 text-xl font-semibold">
+      Let's Build Together
+    </h3>
+
+    <p className="mt-2 text-sm text-muted-foreground">
+      Share your ideas, goals, and creative vision with our team.
+    </p>
+
+  </motion.div>
+
+  {/* SMALL GLOW */}
+  <motion.div
+    animate={{
+      y: [0, 10, 0],
+      scale: [1, 1.1, 1],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 5,
+    }}
+    className="absolute bottom-20 right-16 h-24 w-24 rounded-full bg-blue-500/30 blur-2xl"
+  />
+
+  {/* OVERLAY */}
+  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+</div>
 
           {/* FLOATING MESSAGE CARD */}
           <motion.div

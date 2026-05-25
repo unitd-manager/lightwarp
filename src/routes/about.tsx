@@ -161,17 +161,132 @@ export default function About() {
             <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
           </div>
 
-          {/* LIGHTHOUSE SCENE */}
-          <div className="relative h-[640px]">
+        {/* CREATIVE STUDIO VISUAL */}
+<div className="relative h-[640px] overflow-hidden">
 
-            <LighthouseScene className="h-full w-full scale-110" />
+  {/* BACKGROUND */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,128,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(0,120,255,0.18),transparent_35%),linear-gradient(to_bottom,#050816,#0a0d1d)]" />
 
-            {/* LARGE GLOW */}
-            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink/10 blur-3xl animate-pulse" />
+  {/* GRID */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+  </div>
 
-            {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-          </div>
+  {/* CENTER IMAGE */}
+  <motion.img
+    initial={{ opacity: 0, scale: 0.92 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1 }}
+    src={images}
+    alt="Creative Studio"
+    className="absolute left-1/2 top-1/2 z-20 w-[72%] max-w-[520px] -translate-x-1/2 -translate-y-1/2 object-contain"
+  />
+
+  {/* FLOATING OBJECT 1 */}
+  <motion.div
+    animate={{
+      y: [0, -18, 0],
+      rotate: [0, 180, 360],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 14,
+      ease: "linear",
+    }}
+    className="absolute left-10 top-20 z-10 h-28 w-28 rounded-3xl border border-white/10 bg-white/[0.05] backdrop-blur-xl"
+  />
+
+  {/* FLOATING RING */}
+  <motion.div
+    animate={{
+      y: [0, 18, 0],
+      rotate: [0, -360],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 16,
+      ease: "linear",
+    }}
+    className="absolute right-12 top-20 z-10 h-40 w-40 rounded-full border-[14px] border-pink-500/20"
+  />
+
+  {/* FLOATING GLASS PANEL */}
+  <motion.div
+    animate={{
+      y: [0, -12, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 6,
+    }}
+    className="absolute bottom-14 left-10 z-30 rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-xl"
+  >
+
+    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+      Since 2018
+    </div>
+
+    <div className="mt-2 text-2xl font-semibold">
+      Creative Studio
+    </div>
+
+    <div className="mt-2 text-sm text-muted-foreground">
+      Crafting cinematic digital experiences with creativity and technology.
+    </div>
+
+  </motion.div>
+
+  {/* FLOATING STATS */}
+  <motion.div
+    animate={{
+      y: [0, 12, 0],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 7,
+    }}
+    className="absolute bottom-10 right-10 z-30 rounded-3xl border border-white/10 bg-black/40 px-6 py-5 backdrop-blur-xl"
+  >
+
+    <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+      Global Creative Team
+    </div>
+
+    <div className="mt-2 text-3xl font-semibold text-gradient">
+      180+ Projects
+    </div>
+
+  </motion.div>
+
+  {/* GLOW SPHERE */}
+  <motion.div
+    animate={{
+      scale: [1, 1.08, 1],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 5,
+    }}
+    className="absolute right-20 bottom-24 h-24 w-24 rounded-full bg-blue-500/30 blur-2xl"
+  />
+
+  {/* ROTATING OUTER RING */}
+  <motion.div
+    animate={{
+      rotate: [0, 360],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 24,
+      ease: "linear",
+    }}
+    className="absolute left-1/2 top-1/2 h-[540px] w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+  />
+
+  {/* OVERLAY */}
+  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+</div>
 
           {/* FLOATING STORY CARD */}
           <motion.div
