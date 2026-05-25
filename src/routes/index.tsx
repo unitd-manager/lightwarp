@@ -254,9 +254,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
-                <div className="mt-6 inline-flex items-center gap-1.5 text-xs text-gradient">
+                {/*<div className="mt-6 inline-flex items-center gap-1.5 text-xs text-gradient">
                   Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
-                </div>
+                </div>*/}
               </div>
             </motion.div>
           ))}

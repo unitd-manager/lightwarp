@@ -168,7 +168,6 @@ export default function About() {
     </div>
   </div>
 </Section>
-  
 
       <Section
         eyebrow="The Crew"
