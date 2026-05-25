@@ -131,6 +131,7 @@ import lightwarpLogo from "../assets/images/lightwarp_transparent.png";
 
 const links = [
   { to: "/", label: "Home" },
+  { to:"/portfolio", label: "portfolio"},
   { to: "/projects", label: "Projects" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
