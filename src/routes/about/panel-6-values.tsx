@@ -4,23 +4,23 @@ import { Section } from "../../components/section";
 const values = [
   {
     icon: "◐",
-    title: "Craft First",
-    desc: "We obsess over every frame. Quality isn't a checkbox — it's the baseline we build from.",
+    title: "Real Artists",
+    desc: "Every member of our team is a working artist or technician — no account managers, no middlemen. The people on your project are the ones who made it.",
   },
   {
     icon: "✦",
-    title: "Client-Led Vision",
-    desc: "Your story drives everything. We listen deeply and translate your goals into visuals that exceed them.",
+    title: "Real-Time First",
+    desc: "We built our pipeline around Unreal Engine and real-time workflows from day one — delivering cinematic quality at a fraction of traditional timelines.",
   },
   {
     icon: "◉",
-    title: "Radical Transparency",
-    desc: "Clear timelines, honest pricing, open communication. No surprises — just a smooth creative partnership.",
+    title: "Passion & Intention",
+    desc: "We are a team with passion, vision, and intention. Every project is treated as a creative opportunity, not just a deliverable.",
   },
   {
     icon: "◭",
-    title: "Always Evolving",
-    desc: "The tools change. The techniques change. We invest relentlessly in staying ahead so your work stays cutting-edge.",
+    title: "Studio Experience",
+    desc: "Our team brings experience from major animated studios. That industry knowledge drives quality and results for every client we work with.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function AboutPanelValues() {
           What We <span className="text-gradient">Stand For</span>
         </>
       }
-      subtitle="Behind every render is a set of principles that guide how we work, communicate, and create."
+      subtitle="We are a team of real artists, technicians, and production staff with passion, vision, and intention — ready to help with any of your 3D visualization needs."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {values.map((v, i) => (

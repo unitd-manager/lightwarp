@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <PageShell>
       <HomePanelHero />
+      <HomePanelWork />
       <HomePanelStats />
       <HomePanelServices />
-      <HomePanelWork />
       <HomePanelPartners />
       <HomePanelAwards />
       <HomePanelTestimonials />

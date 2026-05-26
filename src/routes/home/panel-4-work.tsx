@@ -6,26 +6,25 @@ const workVideos = [
   {
     title: "Shell You Be Mine?",
     label: "Short Film",
-    desc: "A creative short film showcasing artistry, mood, and character in motion.",
+    desc: "24 artists. 15 weeks. A novel real-time pipeline — award-winning short film from concept to completion.",
     src: "https://www.youtube.com/embed/yinRrmEpfr4",
-    highlight: "+28% audience recall",
   },
   {
     title: "Lightwarp Studios Capabilities Reel",
-    label: "Studio Project",
-    desc: "An immersive brand visual crafted with detail and atmosphere",
+    label: "Studio Reel",
+    desc: "An immersive capabilities reel showcasing our full production range — crafted with detail and atmosphere.",
     src: "https://player.vimeo.com/video/1153379831",
   },
   {
-    title: "The jab",
-    label: "Short Flim ",
-    desc: "A short case film highlighting our scene creation, lighting, and atmosphere work in a polished edit.",
+    title: "The Jab",
+    label: "Short Film",
+    desc: "A short film highlighting our scene creation, lighting, and atmosphere work in a polished cinematic edit.",
     src: "https://www.youtube.com/embed/4d27i10x2wI?t=3s",
   },
   {
-    title: "Cyberia 2084 - Blender EEVEE 3D Animated Short Film",
+    title: "Cyberia 2084",
     label: "Animation",
-    desc: "A character-centric demo reel showcasing emotion, gesture, and performance animation.",
+    desc: "A Blender EEVEE animated short showcasing character performance, emotion, and real-time rendering quality.",
     src: "https://www.youtube.com/embed/pTmzrHqdS_4",
   },
 ];
@@ -35,7 +34,7 @@ export function HomePanelWork() {
     <Section
       eyebrow="Our Work"
       title={<>Studio <span className="text-gradient">Videos</span></>}
-      subtitle="Every card is a video produced by our team — no placeholder case study card, just real work in motion."
+      subtitle="Real work in motion — every video produced by our team using our proprietary real-time pipeline."
     >
       <div className="grid gap-6 sm:grid-cols-2">
         {workVideos.map((video) => (
@@ -52,25 +51,26 @@ export function HomePanelWork() {
               </div>
               <h4 className="text-xl font-semibold text-gradient">{video.title}</h4>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">{video.desc}</p>
-              {video.highlight && (
-                <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-white/80">
-                  <span className="h-2.5 w-2.5 rounded-full bg-gradient-brand" />
-                  {video.highlight}
-                </div>
-              )}
             </div>
           </article>
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center">
+      {/* CTA buttons */}
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
         <Link
           to="/projects"
           className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-brand px-8 py-4 text-sm font-medium text-white glow-brand transition-transform hover:scale-[1.03]"
         >
-          <span className="relative z-10">See More Videos</span>
+          <span className="relative z-10">See All Projects</span>
           <span className="relative z-10">→</span>
           <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+        </Link>
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-8 py-4 text-sm font-medium backdrop-blur transition-colors hover:bg-white/[0.08]"
+        >
+          Start A Project →
         </Link>
       </div>
     </Section>

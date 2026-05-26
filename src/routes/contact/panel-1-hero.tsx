@@ -68,8 +68,8 @@ export function ContactPanelHero() {
 
             <div className="mt-16 grid gap-4 sm:grid-cols-3">
               {[
-                { title: "Email", desc: "hello@lightwarp.com" },
-                { title: "Location", desc: "San Francisco, CA" },
+                { title: "Email", desc: "info@lightwarp3d.com" },
+                { title: "Phone", desc: "(615) 571-9395" },
                 { title: "Availability", desc: "Open For Projects" },
               ].map((item) => (
                 <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-xl">

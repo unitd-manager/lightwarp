@@ -6,6 +6,8 @@ import About from "./routes/about";
 import Contact from "./routes/contact";
 import Projects from "./routes/projects";
 import Services from "./routes/services";
+import Privacy from "./routes/privacy";
+import Terms from "./routes/terms";
 
 function NotFound() {
   return (
@@ -38,6 +40,8 @@ export default function App() {
       <Route path="/services" element={<Services />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

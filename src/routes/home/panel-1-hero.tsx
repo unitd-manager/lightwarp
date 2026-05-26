@@ -20,22 +20,23 @@ export function HomePanelHero() {
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-[0.25em] text-muted-foreground backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-gradient-brand pulse-glow" />
-            Cinematic 3D Studio
+            Real-Time 3D Studio
           </div>
           <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-semibold leading-[0.95]">
-            Guiding Your Vision Into{" "}
-            <span className="text-gradient">Extraordinary</span> 3D Experiences
+            A New Age Creative{" "}
+            <span className="text-gradient">3D Studio.</span>{" "}
+            Powered by Real-Time Technology
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground">
-            We create immersive 3D animation and visual experiences that
-            illuminate brands.
+            Creative, impactful 3D animation built to engage, convert, and
+            perform — powered by a proprietary real-time pipeline.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               to="/projects"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-medium text-white glow-brand transition-transform hover:scale-[1.03]"
             >
-              <span className="relative z-10">Explore Projects</span>
+              <span className="relative z-10">Our Recent Work</span>
               <span className="relative z-10">→</span>
               <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
             </Link>
@@ -43,7 +44,7 @@ export function HomePanelHero() {
               to="/contact"
               className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-7 py-3.5 text-sm font-medium backdrop-blur transition-colors hover:bg-white/[0.08]"
             >
-              Get Started
+              Connect With Us
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>

@@ -11,7 +11,7 @@ export default function About() {
   return (
     <PageShell>
       <AboutPanelHero />
-      <AboutPanelTimeline />
+    {/* <AboutPanelTimeline /> */}
       <AboutPanelStory />
       <AboutPanelValues />
       <AboutPanelTeam />

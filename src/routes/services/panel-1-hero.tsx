@@ -59,7 +59,7 @@ export function ServicesPanelHero() {
             </div>
 
             <div className="mt-14 flex flex-wrap gap-3">
-              {["3D Animation", "CGI", "VFX", "Motion Graphics", "Realtime Unreal", "Product Visualization"].map((item) => (
+              {["3D Commercials", "3D Asset Services", "Original IP", "Consulting", "Unreal Engine", "Real-Time Pipeline"].map((item) => (
                 <div
                   key={item}
                   className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-muted-foreground backdrop-blur-xl transition-all hover:border-pink/30 hover:text-white"
