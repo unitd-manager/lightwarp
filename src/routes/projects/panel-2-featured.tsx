@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "../../components/section";
+import { VideoPlayer } from "../../components/video-player";
 
 const projects = [
   {
@@ -58,14 +59,7 @@ export function ProjectsPanelFeatured() {
             className="group relative overflow-hidden rounded-3xl glass border-gradient"
           >
             <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
-              <iframe
-                src={p.videoSrc}
-                title={p.title}
-                className="w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <VideoPlayer src={p.videoSrc} title={p.title} />
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-semibold">{p.title}</h3>

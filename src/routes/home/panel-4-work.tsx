@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Section } from "../../components/section";
+import { VideoPlayer } from "../../components/video-player";
 
 const workVideos = [
   {
@@ -43,14 +44,7 @@ export function HomePanelWork() {
             className="group relative overflow-hidden rounded-3xl backdrop-blur-xl bg-white/[0.03] border border-gradient p-2 hover:shadow-[0_0_40px_rgba(255,77,205,0.4)] transition-transform hover:-translate-y-1"
           >
             <div className="aspect-video w-full rounded-2xl overflow-hidden">
-              <iframe
-                src={video.src}
-                title={video.title}
-                className="w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <VideoPlayer src={video.src} title={video.title} />
             </div>
             <div className="p-6">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
